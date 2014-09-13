@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+
+#fetches list of US repos from the social media registry, and outputs merged list to command line
+#@todo, can this be done automagically without loosing formatting and comments?
+
+require "open-uri"
+require "json"
+require "yaml"
+
+def org_exists?(org)
+  !!open("https://github.com/#{org}")
+rescue
+  false
+end
+
+org_file = YAML.load_file "./_data/governments.yml"
+existing = org_file["United States"].map { |org| org.downcase }
+
+orgs = JSON.parse open("http://registry.usa.gov/accounts?service_id=GitHub&format=json").read
+orgs = orgs["accounts"].collect { |data| data["account"] }
+
+orgs.each do |org|
+  next if existing.include?(org.downcase)
+  next unless org_exists? org
+  org_file["United States"].push(org.downcase)
+end
+
+output = {
+  "United States" => org_file["United States"].uniq.sort do
+      |a,b| a.upcase <=> b.upcase
+  end
+}
+puts "To be pasted into _data/governments.yml"
+puts output.to_yaml
+
+orgs.map! { |org| org.downcase }
+
+puts "\n\nMissing from registry:"
+puts (existing - orgs).to_yaml
+
+puts "\n\nIn the registry, but not valid"
+puts (orgs - existing).to_yaml
