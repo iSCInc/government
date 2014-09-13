@@ -1,0 +1,90 @@
+# global settings
+title: "iSC Inc. and Government"
+description: "iSC Inc. helps government build wiki software better, together"
+permalink: "/stories/:title"
+url: http://iscinc.github.io/government
+relative_permalinks: false
+analytics_account: "UA-XXXX"
+
+# build settings
+exclude: ["script", "vendor", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "package.json"]
+markdown: kramdown
+gems:
+  - jekyll-sitemap
+
+# orgs on front page
+featured_orgs:
+  - gcba
+  - nla
+  - GeoscienceAustralia
+  - qld-gov-au
+  - onroerenderfgoed
+  - geobolivia
+  - dadosgovbr
+  - tisorocaba
+  - ca-canada
+  - mce-scarto
+  - wet-boew
+  - e-gob
+  - City-of-Helsinki
+  - itschool
+  - linz
+  - govph
+  - commonwealth-of-puerto-rico
+  - The-Municipality-of-Staffanstorp
+  - malmostad
+  - ogdch
+  - alv-ch
+  - city-of-bloomington
+  - cityofchattanooga
+  - cityofnewyork
+  - Honolulu
+  - mnhrc
+  - NYCComptroller
+  - ArlingtonCounty
+  - sfcta
+  - olcf
+  - ORNL
+  - azgs
+  - nysenate
+  - State-of-Arizona
+  - alphagov
+  - BarnsleyCouncil
+  - BristolCityCouncil
+  - cabinetoffice
+  - datagovuk
+  - dfid
+  - east-sussex-county-council
+  - hmrc
+  - MetOffice
+  - 18f
+  - CA-CST-SII
+  - cfpb
+  - cooperhewitt
+  - erdc-cm
+  - fda
+  - gsa
+  - hhs
+  - nasa
+  - USDeptVeteransAffairs
+  - virtual-world-framework
+  - whitehouse
+  - bundestag
+  - CodeandoMexico
+  - codeforeurope
+  - dataviz
+  - dobtco
+  - KoelnAPI
+  - mysociety
+  - openva
+  - postcode
+  - sunlightlabs
+  - theodi
+  - codeforamerica
+  - codeforaustralia
+  - okfngr
+  - okfn
+  - nuknightlab
+  - dssg
+  - codeforboston
+  - teampopong
