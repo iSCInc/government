@@ -4,7 +4,7 @@ description: "iSC Inc. helps government build wiki software better, together"
 permalink: "/stories/:title"
 url: http://iscinc.github.io/government
 relative_permalinks: false
-analytics_account: "UA-XXXX"
+analytics_account: "UA-54991804-2"
 
 # build settings
 exclude: ["script", "vendor", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "package.json"]
